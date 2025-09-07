@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio de Renato</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Portafolio minimal con animaciones de scroll, menú hamburguesa y secciones dinámicas." />
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <header class="navbar">
+    <a class="logo" href="#home">Renato</a>
+
+    <nav id="nav" class="nav" aria-label="Principal">
+      <a href="#home">Inicio</a>
+      <a href="#about">Sobre mí</a>
+      <a href="#work">Proyectos</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+
+    <button class="burger" aria-label="Abrir menú" aria-controls="nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Sección Hero -->
+  <section id="home" class="section hero">
+    <div class="container">
+      <p class="kicker reveal">Ingeniería & Automatización</p>
+      <h1 class="title reveal">Hola, soy <span class="accent">Renato</span> — ingeniero electrónico.</h1>
+      <p class="subtitle reveal">Construyo soluciones técnicas y experiencias digitales con enfoque en eficiencia y claridad.</p>
+      <a class="cta reveal" href="#work">Ver proyectos</a>
+    </div>
+  </section>
+
+  <!-- Sobre mí -->
+  <section id="about" class="section about">
+    <div class="container narrow">
+      <h2 class="section-title reveal">Sobre mí</h2>
+      <p class="reveal">Soy Ingeniero Electrónico con experiencia en proyectos, automatización y programación. Me gusta trabajar con sistemas de control, protocolos industriales y visualización clara de datos.</p>
+      <p class="reveal">Este portafolio está hecho desde cero con HTML, CSS y JavaScript, inspirado en un estilo minimalista con transiciones suaves.</p>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="work" class="section work">
+    <div class="container">
+      <h2 class="section-title reveal">Proyectos</h2>
+
+      <div class="projects-grid">
+        <a class="project card reveal" href="#" aria-label="Proyecto 1">
+          <div class="badge">Nuevo</div>
+          <h3>Dashboard SCADA</h3>
+          <p>Visualización en tiempo real con Modbus y BACnet.</p>
+        </a>
+
+        <a class="project card reveal" href="#" aria-label="Proyecto 2">
+          <h3>Automatización HVAC</h3>
+          <p>Control con TIA Portal y Desigo CC.</p>
+        </a>
+
+        <a class="project card reveal" href="#" aria-label="Proyecto 3">
+          <h3>Integración IoT</h3>
+          <p>Sensores y analítica ligera en la nube.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contact" class="section contact">
+    <div class="container narrow">
+      <h2 class="section-title reveal">Contacto</h2>
+      <form class="contact-form reveal" onsubmit="event.preventDefault(); alert('¡Gracias! Este formulario es de ejemplo.');">
+        <label>
+          <span>Nombre</span>
+          <input type="text" name="nombre" placeholder="Tu nombre" required />
+        </label>
+        <label>
+          <span>Correo</span>
+          <input type="email" name="correo" placeholder="tunombre@email.com" required />
+        </label>
+        <label>
+          <span>Mensaje</span>
+          <textarea name="mensaje" placeholder="Cuéntame sobre tu proyecto" rows="4"></textarea>
+        </label>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Renato — Portafolio.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
